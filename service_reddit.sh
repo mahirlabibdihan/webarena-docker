@@ -13,5 +13,5 @@ docker exec reddit sed -i \
   -e 's/^pm.min_spare_servers = .*/pm.min_spare_servers = 5/' \
   -e 's/^pm.max_spare_servers = .*/pm.max_spare_servers = 20/' \
   -e 's/^;pm.max_requests = .*/pm.max_requests = 500/' \
-  /usr/local/etc/php-fpm.d/www.conf
+  /usr/local/etc/php-fpm.d/www.conf 
 docker exec reddit supervisorctl restart php-fpm

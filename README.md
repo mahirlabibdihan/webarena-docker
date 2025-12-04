@@ -1,4 +1,4 @@
-# Install Images
+# Pull Images
 ### Gitlab
 ```bash
 docker pull webarenaimages/gitlab-populated-final
@@ -46,7 +46,7 @@ tar -xzf ./openstreetmap-website.tar.gz
 #### Tile Server -->
 
 
-# (Re)Start Services
+# Run Containers
 ### Gitlab
 ```bash
 bash restart_site.sh gitlab

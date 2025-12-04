@@ -1,0 +1,24 @@
+shopping_admin:
+  container_name: shopping_admin
+  service_url: "http://localhost:7780/admin"
+  service_script: "service_shopping_admin.sh"
+
+reddit:
+  container_name: reddit
+  service_url: "http://localhost:9999"
+  service_script: "service_reddit.sh"
+
+gitlab:
+  container_name: gitlab
+  service_url: "http://localhost:8023"
+  service_script: "service_gitlab.sh"
+
+shopping:
+  container_name: shopping
+  service_url: "http://localhost:7770"
+  service_script: "service_shopping.sh"
+
+wikipedia:
+  container_name: wikipedia
+  service_url: "http://localhost:8888/wikipedia_en_all_maxi_2022-05/A/User:The_other_Kiwix_guy/Landing"
+  service_script: "service_wikipedia.sh"

@@ -1,7 +1,7 @@
 #!/bin/bash
 source 00_vars.sh
 
-docker create --name gitlab -p $GITLAB_PORT:$GITLAB_PORT gitlab-populated-final-port8023 /opt/gitlab/embedded/bin/runsvdir-start --env GITLAB_PORT=$GITLAB_PORT
+docker create --name gitlab -p $GITLAB_PORT:8023 gitlab-populated-final-port8023 /opt/gitlab/embedded/bin/runsvdir-start
 docker start gitlab
 
 bash countdown.sh 60

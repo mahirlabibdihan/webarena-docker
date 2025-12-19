@@ -1,0 +1,1 @@
+bash restart_site.sh $1

@@ -100,28 +100,27 @@ rm -f openstreetmap-website-db.tar.gz openstreetmap-website-web.tar.gz
 # Run Containers
 ### Gitlab
 ```bash
-bash restart_site.sh gitlab
+bash start_site.sh gitlab
 ```
 ### Shopping
 ```bash
-bash restart_site.sh shopping
+bash start_site.sh shopping
 ```
 
 ### Reddit
 ```bash
-bash restart_site.sh reddit
+bash start_site.sh reddit
 ```
 
 ### Shopping Admin
 ```bash
-bash restart_site.sh shopping_admin
+bash start_site.sh shopping_admin
 ```
 
 ### Wikipedia
 ```bash
-bash restart_site.sh wikipedia
+bash start_site.sh wikipedia
 ```
-
 
 ### Nominatim
 
@@ -169,7 +168,7 @@ docker run --name nominatim --restart unless-stopped \
 docker run --name tile --restart unless-stopped \
         --memory=2g --memory-swap=4g \
         --volume=osm-data:/data/database/ --volume=osm-tiles:/data/tiles/ \
-        -p 8080:80 -d overv/openstreetmap-tile-server run
+        -p 8880:80 -d overv/openstreetmap-tile-server run
 ```
 
 ### Map Frontend
@@ -180,4 +179,27 @@ bash restart_osm.sh
 ```bash
 sudo apt install osmosis
 osmosis --read-pbf ./osm_dump/us-northeast-latest.osm.pbf   --write-apidb host="localhost:54321" database="openstreetmap"   user="openstreetmap" password=" " validateSchemaVersion="no"
+```
+
+# Restart Containers
+*Need to restart 4 websites after each full experiment, as write tasks changes the website state.*
+
+### Gitlab
+```bash
+bash restart_site.sh gitlab
+```
+
+### Shopping
+```bash
+bash restart_site.sh shopping
+```
+
+### Reddit
+```bash
+bash restart_site.sh reddit
+```
+
+### Shopping Admin
+```bash
+bash restart_site.sh shopping_admin
 ```

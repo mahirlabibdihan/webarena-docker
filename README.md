@@ -1,47 +1,53 @@
 # Download Data
 
-- **Wikipedia Data**
-    ```bash
-    curl -O -C - http://metis.lti.cs.cmu.edu/webarena-images/wikipedia_en_all_maxi_2022-05.zim
-    mkdir wikipedia
-    mv ./wikipedia_en_all_maxi_2022-05.zim wikipedia/
-    ```
-- **OSM Dump**
-    ```bash
-    curl -O -C - https://webarena-map-server-data.s3.amazonaws.com/osm_dump.tar
-    tar -xvf osm_dump.tar
-    rm -f osm_dump.tar
-    ```
-- **Nominatim Volumes**
-    ```bash
-    curl -O -C - https://webarena-map-server-data.s3.amazonaws.com/nominatim_volumes.tar
-    tar -C /var/lib/docker/volumes --strip-components=5 -xf ./nominatim_volumes.tar
-    ```
-- **OSRM Data**
-    ```bash
-    curl -O -C - https://webarena-map-server-data.s3.amazonaws.com/osrm_routing.tar
-    tar -xvf osrm_routing.tar
-    rm -f osrm_routing.tar
-    ```
-- **Tile Volumes**
-    ```bash
-    curl -O -C - https://webarena-map-server-data.s3.amazonaws.com/osm_tile_server.tar
-    tar -C /var/lib/docker/volumes --strip-components=5 -xf ./osm_tile_server.tar
-    ```
-- **Map Frontend**
-    ```bash
-    curl -O -C -  https://zenodo.org/records/12636845/files/openstreetmap-website-db.tar.gz
-    curl -O -C -  https://zenodo.org/records/12636845/files/openstreetmap-website-web.tar.gz
-    curl -O -C -  https://zenodo.org/records/12636845/files/openstreetmap-website.tar.gz
-    tar -xzf ./openstreetmap-website.tar.gz
-    rm -f openstreetmap-website.tar.gz
-    ```
-- **Tile Server**
-    ```bash
-    curl -O -C - https://webarena-map-server-data.s3.amazonaws.com/osm_tile_server.tar
-    tar -xvfC /var/lib/docker/volumes --strip-components=5 -xf ./osm_tile_server.tar
-    rm -f osm_tile_server.tar
-    ```
+### Wikipedia Data
+```bash
+curl -O -C - http://metis.lti.cs.cmu.edu/webarena-images/wikipedia_en_all_maxi_2022-05.zim
+mkdir wikipedia
+mv ./wikipedia_en_all_maxi_2022-05.zim wikipedia/
+```
+
+### OSM Dump
+```bash
+curl -O -C - https://webarena-map-server-data.s3.amazonaws.com/osm_dump.tar
+tar -xvf osm_dump.tar
+rm -f osm_dump.tar
+```
+
+### Nominatim Volumes
+```bash
+curl -O -C - https://webarena-map-server-data.s3.amazonaws.com/nominatim_volumes.tar
+tar -C /var/lib/docker/volumes --strip-components=5 -xf ./nominatim_volumes.tar
+```
+
+### OSRM Data
+```bash
+curl -O -C - https://webarena-map-server-data.s3.amazonaws.com/osrm_routing.tar
+tar -xvf osrm_routing.tar
+rm -f osrm_routing.tar
+```
+
+### Tile Volumes
+```bash
+curl -O -C - https://webarena-map-server-data.s3.amazonaws.com/osm_tile_server.tar
+tar -C /var/lib/docker/volumes --strip-components=5 -xf ./osm_tile_server.tar
+```
+
+### Map Frontend
+```bash
+curl -O -C -  https://zenodo.org/records/12636845/files/openstreetmap-website-db.tar.gz
+curl -O -C -  https://zenodo.org/records/12636845/files/openstreetmap-website-web.tar.gz
+curl -O -C -  https://zenodo.org/records/12636845/files/openstreetmap-website.tar.gz
+tar -xzf ./openstreetmap-website.tar.gz
+rm -f openstreetmap-website.tar.gz
+```
+
+### Tile Server
+```bash
+curl -O -C - https://webarena-map-server-data.s3.amazonaws.com/osm_tile_server.tar
+tar -xvfC /var/lib/docker/volumes --strip-components=5 -xf ./osm_tile_server.tar
+rm -f osm_tile_server.tar
+```
 
 # Setup Images
 

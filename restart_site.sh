@@ -59,4 +59,3 @@ bash "$SERVICE_SCRIPT" "$CONTAINER_NAME"
 
 # Wait for service to come up
 bash spinner.sh "$CONTAINER_NAME" "$SERVICE_URL"
-update_status "Running"

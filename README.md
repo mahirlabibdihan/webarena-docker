@@ -1,3 +1,7 @@
+# WebArena Environment Setup Instructions
+
+Edit `00_vars.sh` and change `PUBLIC_HOSTNAME` to your server's public hostname or IP address before running any scripts. Can be found by running `hostname -I` on the server.
+
 # Download Data
 
 ### Wikipedia Data
@@ -38,7 +42,7 @@ tar -C /var/lib/docker/volumes --strip-components=5 -xf ./osm_tile_server.tar
 curl -O -C -  https://zenodo.org/records/12636845/files/openstreetmap-website-db.tar.gz
 curl -O -C -  https://zenodo.org/records/12636845/files/openstreetmap-website-web.tar.gz
 curl -O -C -  https://zenodo.org/records/12636845/files/openstreetmap-website.tar.gz
-tar -xzf ./openstreetmap-website.tar.gz
+tar -xvzf ./openstreetmap-website.tar.gz
 rm -f openstreetmap-website.tar.gz
 ```
 
